@@ -61,8 +61,8 @@ export function RotatingCards({ items, radius = 320 }: Props) {
       onMouseMove={(e) => dragging && onMove(e.clientX)}
       onMouseUp={onUp}
       onMouseLeave={onUp}
-      onTouchStart={(e) => onDown(e.touches[0].clientX)}
-      onTouchMove={(e) => onMove(e.touches[0].clientX)}
+      onTouchStart={(e) => onDown(e.touches[0]!.clientX)}
+      onTouchMove={(e) => onMove(e.touches[0]!.clientX)}
       onTouchEnd={onUp}
       style={{ cursor: dragging ? "grabbing" : "grab" }}
       aria-label="Facilities carousel — drag to rotate"
